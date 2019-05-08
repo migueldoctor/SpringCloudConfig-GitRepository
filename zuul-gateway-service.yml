@@ -1,0 +1,7 @@
+server:
+  port: 8080 #the default port used for zuul service
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
