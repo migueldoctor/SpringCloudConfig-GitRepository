@@ -7,3 +7,5 @@ eureka:
   client:
     registerWithEureka: false #tells the built-in eureka client to not register itself with eureka, because we should act as a server
     fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
