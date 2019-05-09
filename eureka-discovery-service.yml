@@ -6,7 +6,7 @@ eureka:
   instance:
     hostname: localhost
     #when the application registers with eureka, it uses its IP address rather than its hostname
-    prefer-ip-address: true
+    #prefer-ip-address: true
   client:
     registerWithEureka: false
     fetchRegistry: false
