@@ -1,0 +1,14 @@
+server:
+  port: 8080 #the default port used for zuul service
+  
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+    routes:
+      sample-service: # Service to create as sample
+        path: /uaa/** #path that will be intercepted
+        url: auth-service #which url the request will e mapped to
+        stripPrefix: false #if zuul should replace the "/uaa/" segment
+        sensitiveHeaders:
