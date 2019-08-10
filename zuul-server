@@ -7,6 +7,9 @@ zuul:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
     routes:
+      echo-service:
+        url:http://localhost:8091 # Mapping all request to echo-service
+        
       sample-service: # Service to create as sample
         path: /uaa/** #path that will be intercepted
         url: auth-service #which url the request will e mapped to
