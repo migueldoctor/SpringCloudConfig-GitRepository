@@ -9,10 +9,7 @@ zuul:
     routes:
       echo-service:
         path: /echo/**
-        url:http://localhost:8091 # Mapping all request to echo-service
-        
-      sample-service: # Service to create as sample
-        path: /uaa/** #path that will be intercepted
-        url: auth-service #which url the request will e mapped to
-        stripPrefix: false #if zuul should replace the "/uaa/" segment
-        sensitiveHeaders:
+        url:http://localhost:8091
+ribbon:
+  eureka:
+    enabled:false
