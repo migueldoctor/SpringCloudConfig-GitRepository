@@ -2,12 +2,13 @@ server:
   port: 8080 #the default port used for zuul service
   
 zuul:
- # ignoredServices: '*'
+  ignoredServices: '*'
   host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
+ #   connect-timeout-millis: 20000
+ #   socket-timeout-millis: 20000
     routes:
       echo-service:
+        path: /echo/**
         url:http://localhost:8091 # Mapping all request to echo-service
         
       sample-service: # Service to create as sample
