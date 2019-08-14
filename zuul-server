@@ -9,7 +9,7 @@ zuul:
     routes:
       echo-service:
         path: /echo/**
-        url:http://localhost:8091
+        url: echo-service
 ribbon:
   eureka:
     enabled:false
