@@ -1,2 +1,7 @@
 server:
   port: ${port:8091}
+  ribbon:
+    eureka:
+      enabled: true
+    #listOfServers: localhost:8090,localhost:9092,localhost:9999
+    ServerListRefreshInterval: 1500
