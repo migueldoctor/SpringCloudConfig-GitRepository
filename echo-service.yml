@@ -3,5 +3,9 @@ server:
   ribbon:
     eureka:
       enabled: true
-    #listOfServers: localhost:8090,localhost:9092,localhost:9999
     ServerListRefreshInterval: 1500
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
