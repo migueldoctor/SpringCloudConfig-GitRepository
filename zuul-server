@@ -4,23 +4,9 @@ server:
 # Option 1: Routing via url:
 # These simple url-routes do not get executed as a HystrixCommand, nor do they load-balance multiple URLs with Ribbon
 # It just take all request to the path echo/ and fordward to the server localhost:8091
-#zuul:
-#  ignoredServices: '*'
-#  routes:
-#    echo-service:
-#      path: /echo/**
-#      url: http://localhost:8091
-
-#Option 2: Another method is specifiying a service-route and configuring a Ribbon client for the serviceId (doing so requires disabling Eureka support in Ribbon)
 zuul:
+  ignoredServices: '*'
   routes:
     echo-service:
       path: /echo/**
-      serviceId: echo-service
-ribbon:
-  eureka:
-    enabled: false
-
-echo-service:
-  ribbon:
-    listOfServers: http://localhost:8091,http://localhost:8092
+      url: http://localhost:8091
